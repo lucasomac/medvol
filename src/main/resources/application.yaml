@@ -1,0 +1,16 @@
+application:
+  developer:
+    name: Lucas de Oliveira Macedo
+    email: lucasomac@outlook.com
+spring:
+  datasource:
+    url: ${DB_HOST}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    generate-ddl: true

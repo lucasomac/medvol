@@ -6,4 +6,4 @@
 
 ${application.title} ${application.version}
 Powered by Spring Boot ${spring-boot.version}
-Developed by ${application.dev.name} - ${application.dev.email}
+Developed by ${application.developer.name} - ${application.developer.email}
