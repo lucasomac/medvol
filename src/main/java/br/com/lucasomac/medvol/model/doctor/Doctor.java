@@ -21,6 +21,7 @@ public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Boolean active;
     private String name;
     private String email;
     private String phone;
@@ -31,6 +32,7 @@ public class Doctor {
     private Address address;
 
     public Doctor(DoctorDTO data) {
+        this.active = true;
         this.name = data.name();
         this.email = data.email();
         this.phone = data.phone();
@@ -50,5 +52,21 @@ public class Doctor {
     @Override
     public int hashCode() {
         return getClass().hashCode();
+    }
+
+    public void updateInfo(DoctorUpdateDTO data) {
+        if (data.name() != null) {
+            this.name = data.name();
+        }
+        if (data.phone() != null) {
+            this.phone = data.phone();
+        }
+        if (data.address() != null) {
+            this.address.updateInfo(data.address());
+        }
+    }
+
+    public void delete() {
+        this.active = false;
     }
 }

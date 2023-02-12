@@ -1,0 +1,2 @@
+-- ALTER TABLE doctors ADD active BOOLEAN;
+-- UPDATE doctors SET ativo = 1;

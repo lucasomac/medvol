@@ -29,4 +29,28 @@ public class Address {
         this.complement = data.complement();
         this.number = data.number();
     }
+
+    public void updateInfo(AddressDTO data) {
+        if (data.publicPlace() != null) {
+            this.publicPlace = data.publicPlace();
+        }
+        if (data.neighborhood() != null) {
+            this.neighborhood = data.neighborhood();
+        }
+        if (data.zipcode() != null) {
+            this.zipcode = data.zipcode();
+        }
+        if (data.uf() != null) {
+            this.uf = data.uf();
+        }
+        if (data.city() != null) {
+            this.city = data.city();
+        }
+        if (data.number() != null) {
+            this.number = data.number();
+        }
+        if (data.complement() != null) {
+            this.complement = data.complement();
+        }
+    }
 }

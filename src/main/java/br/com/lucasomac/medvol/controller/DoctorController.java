@@ -1,9 +1,6 @@
 package br.com.lucasomac.medvol.controller;
 
-import br.com.lucasomac.medvol.model.doctor.Doctor;
-import br.com.lucasomac.medvol.model.doctor.DoctorDTO;
-import br.com.lucasomac.medvol.model.doctor.DoctorListDTO;
-import br.com.lucasomac.medvol.model.doctor.DoctorRepository;
+import br.com.lucasomac.medvol.model.doctor.*;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -28,6 +25,20 @@ public class DoctorController {
 
     @GetMapping
     public Page<DoctorListDTO> getAllDoctors(@PageableDefault(size = 10, page = 0, sort = {"nome"}) Pageable pageable) {
-        return repository.findAll(pageable).map(DoctorListDTO::new);
+        return repository.findAllByActiveTrue(pageable).map(DoctorListDTO::new);
+    }
+
+    @PutMapping
+    @Transactional
+    public void update(@RequestBody @Valid DoctorUpdateDTO data) {
+        var doctor = repository.getReferenceById(data.id());
+        doctor.updateInfo(data);
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void delete(@PathVariable Long id) {
+        var doctor = repository.getReferenceById(id);
+        doctor.delete();
     }
 }
