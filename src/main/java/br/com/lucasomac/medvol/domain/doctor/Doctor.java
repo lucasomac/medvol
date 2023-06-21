@@ -1,7 +1,7 @@
-package br.com.lucasomac.medvol.model.doctor;
+package br.com.lucasomac.medvol.domain.doctor;
 
-import br.com.lucasomac.medvol.model.Specialty;
-import br.com.lucasomac.medvol.model.address.Address;
+import br.com.lucasomac.medvol.domain.Specialty;
+import br.com.lucasomac.medvol.domain.address.Address;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package br.com.lucasomac.medvol.model.patient;
+package br.com.lucasomac.medvol.domain.patient;
 
 public record PatientListDTO(Long id, String name, String email, String cpf) {
 

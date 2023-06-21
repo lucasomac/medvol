@@ -1,6 +1,6 @@
-package br.com.lucasomac.medvol.model.patient;
+package br.com.lucasomac.medvol.domain.patient;
 
-import br.com.lucasomac.medvol.model.address.AddressDTO;
+import br.com.lucasomac.medvol.domain.address.AddressDTO;
 import jakarta.validation.constraints.NotNull;
 
 public record PatientUpdateDTO(

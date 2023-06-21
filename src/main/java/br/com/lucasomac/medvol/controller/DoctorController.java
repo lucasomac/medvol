@@ -1,6 +1,6 @@
 package br.com.lucasomac.medvol.controller;
 
-import br.com.lucasomac.medvol.model.doctor.*;
+import br.com.lucasomac.medvol.domain.doctor.*;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

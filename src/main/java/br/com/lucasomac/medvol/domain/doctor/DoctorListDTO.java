@@ -1,6 +1,6 @@
-package br.com.lucasomac.medvol.model.doctor;
+package br.com.lucasomac.medvol.domain.doctor;
 
-import br.com.lucasomac.medvol.model.Specialty;
+import br.com.lucasomac.medvol.domain.Specialty;
 
 public record DoctorListDTO(Long id, String name, String email, String crm, Specialty specialty) {
     public DoctorListDTO(Doctor doctor) {

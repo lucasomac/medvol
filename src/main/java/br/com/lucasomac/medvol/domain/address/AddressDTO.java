@@ -1,4 +1,4 @@
-package br.com.lucasomac.medvol.model.address;
+package br.com.lucasomac.medvol.domain.address;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

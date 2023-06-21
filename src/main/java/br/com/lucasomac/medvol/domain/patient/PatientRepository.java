@@ -1,4 +1,4 @@
-package br.com.lucasomac.medvol.model.patient;
+package br.com.lucasomac.medvol.domain.patient;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,6 +1,6 @@
-package br.com.lucasomac.medvol.model.patient;
+package br.com.lucasomac.medvol.domain.patient;
 
-import br.com.lucasomac.medvol.model.address.Address;
+import br.com.lucasomac.medvol.domain.address.Address;
 
 public record PatientDetailsDTO(Long id, String name, String email, String cpf, String phone, Address address) {
 

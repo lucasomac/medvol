@@ -1,6 +1,6 @@
-package br.com.lucasomac.medvol.model.patient;
+package br.com.lucasomac.medvol.domain.patient;
 
-import br.com.lucasomac.medvol.model.address.AddressDTO;
+import br.com.lucasomac.medvol.domain.address.AddressDTO;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

@@ -1,4 +1,4 @@
-package br.com.lucasomac.medvol.model.address;
+package br.com.lucasomac.medvol.domain.address;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
