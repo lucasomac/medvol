@@ -1,4 +1,4 @@
-package br.com.lucasomac.medvol.infra;
+package br.com.lucasomac.medvol.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
