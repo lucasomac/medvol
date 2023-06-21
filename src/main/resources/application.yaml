@@ -1,3 +1,7 @@
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET}
 application:
   developer:
     name: Lucas de Oliveira Macedo
