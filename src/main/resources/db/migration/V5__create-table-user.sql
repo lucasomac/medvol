@@ -1,0 +1,6 @@
+-- CREATE TABLE user
+-- (
+--     id       BIGINT       NOT NULL PRIMARY KEY,
+--     login    VARCHAR(100) NOT NULL,
+--     password VARCHAR(255) NOT NULL
+-- );
