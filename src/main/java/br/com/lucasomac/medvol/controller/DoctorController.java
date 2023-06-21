@@ -10,7 +10,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-@RequestMapping("doctors")
+import static br.com.lucasomac.medvol.commons.Constants.API_DOCTORS_PATH;
+
+@RequestMapping(API_DOCTORS_PATH)
 @RestController
 public class DoctorController {
     private final DoctorRepository repository;
@@ -24,7 +26,7 @@ public class DoctorController {
     public ResponseEntity<DoctorDetailsDTO> create(@Valid @RequestBody DoctorDTO data, UriComponentsBuilder uriComponentsBuilder) {
         var doctor = new Doctor(data);
         this.repository.save(doctor);
-        var uri = uriComponentsBuilder.path("doctors/{id}").buildAndExpand(doctor.getId()).toUri();
+        var uri = uriComponentsBuilder.path(API_DOCTORS_PATH + "/{id}").buildAndExpand(doctor.getId()).toUri();
         return ResponseEntity.created(uri).body(new DoctorDetailsDTO(doctor));
     }
 
@@ -35,7 +37,7 @@ public class DoctorController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<DoctorListDTO>> getAllDoctors(@PageableDefault(size = 10, page = 0, sort = {"name"}) Pageable pageable) {
+    public ResponseEntity<Page<DoctorListDTO>> getAllDoctors(@PageableDefault(size = 4, sort = {"name"}) Pageable pageable) {
         return ResponseEntity.ok(repository.findAllByActiveTrue(pageable).map(DoctorListDTO::new));
     }
 

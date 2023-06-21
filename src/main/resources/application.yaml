@@ -2,6 +2,9 @@ application:
   developer:
     name: Lucas de Oliveira Macedo
     email: lucasomac@outlook.com
+server:
+  error:
+    include-stacktrace: never
 spring:
   datasource:
     url: ${DB_HOST}
