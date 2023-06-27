@@ -4,6 +4,7 @@ import br.com.lucasomac.medvol.domain.appointment.AppointmentCancelDTO;
 import br.com.lucasomac.medvol.domain.appointment.AppointmentDTO;
 import br.com.lucasomac.medvol.domain.appointment.AppointmentDetailsDTO;
 import br.com.lucasomac.medvol.domain.appointment.AppointmentSchedule;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import static br.com.lucasomac.medvol.commons.Constants.API_APPOINTMENT_PATH;
 
 @RestController
 @RequestMapping(API_APPOINTMENT_PATH)
+@SecurityRequirement(name = "bearer-key")
 public class AppointmentController {
     private final AppointmentSchedule appointmentSchedule;
 

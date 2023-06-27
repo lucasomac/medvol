@@ -1,6 +1,8 @@
 package br.com.lucasomac.medvol.controller;
 
 import br.com.lucasomac.medvol.domain.patient.*;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,6 +16,7 @@ import static br.com.lucasomac.medvol.commons.Constants.API_PATIENTS_PATH;
 
 @RestController
 @RequestMapping(API_PATIENTS_PATH)
+@SecurityRequirement(name = "bearer-key")
 public class PatientController {
 
     private final PatientRepository repository;
