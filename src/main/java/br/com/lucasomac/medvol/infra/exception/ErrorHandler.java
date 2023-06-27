@@ -1,5 +1,6 @@
 package br.com.lucasomac.medvol.infra.exception;
 
+import br.com.lucasomac.medvol.domain.ValidationException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +29,11 @@ public class ErrorHandler {
 
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<Object> handleBadRequest(HttpMessageNotReadableException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+
+    @ExceptionHandler(ValidationException.class)
+    public ResponseEntity<Object> handleBusinessException(ValidationException ex) {
         return ResponseEntity.badRequest().body(ex.getMessage());
     }
 

@@ -29,6 +29,7 @@ public class SecurityConfigurations {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable).sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS)).authorizeHttpRequests(req -> {
             req.requestMatchers(HttpMethod.POST, API_LOGIN_PATH).permitAll();
+            req.requestMatchers("/v3/api-docs/**", "/swagger.html", "/swagger-ui/**").permitAll();
             req.requestMatchers(HttpMethod.DELETE, API_DOCTORS_PATH).hasRole("ADMIN");
             req.requestMatchers(HttpMethod.DELETE, API_PATIENTS_PATH).hasRole("ADMIN");
             req.anyRequest().authenticated();

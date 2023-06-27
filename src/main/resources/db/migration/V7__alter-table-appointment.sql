@@ -1,0 +1,1 @@
+-- ALTER TABLE appointment ADD COLUMN cancel_reason VARCHAR(100);
