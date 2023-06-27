@@ -2,28 +2,18 @@ api:
   security:
     token:
       secret: ${JWT_SECRET:12345678}
-application:
-  developer:
-    name: Lucas de Oliveira Macedo
-    email: lucasomac@outlook.com
 server:
   error:
     include-stacktrace: never
 spring:
-  datasource:
-    url: ${DB_HOST}
-    username: ${DB_USER}
-    password: ${DB_PASS}
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    database: postgresql
-    generate-ddl: true
-    properties:
-      hibernate:
-        format_sql: true
+  application:
+    name: Med Vol API
+    developer:
+      name: Lucas de Oliveira Macedo
+      email: lucasomac@outlook.com
+      url: https://www.linkedin.com/in/lucasomac/
+  profiles:
+    active: dev
 springdoc:
   swagger-ui:
     path: /swagger.html

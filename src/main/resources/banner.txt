@@ -4,6 +4,6 @@
 |  |   |  \   --.\ `-' |   \   / ' '-' '|  |
 `--'   `--'`----' `---'     `-'   `---' `--'
 
-${application.title} ${application.version}
+${spring.application.name} ${application.version}
 Powered by Spring Boot ${spring-boot.version}
-Developed by ${application.developer.name} - ${application.developer.email}
+Developed by ${spring.application.developer.name} - ${spring.application.developer.email}
