@@ -1,0 +1,12 @@
+-- create table appointment
+-- (
+--     id         bigint not null,
+--     id_doctor  bigint not null,
+--     id_patient bigint not null,
+--     date       date   not null,
+--
+--     primary key (id),
+--     constraint fk_appointment_doctor_id foreign key (id_doctor) references doctor (id),
+--     constraint fk_appointment_patient_id foreign key (id_patient) references patient (id)
+--
+-- );
