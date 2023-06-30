@@ -4,12 +4,3 @@ spring:
     username: ${DB_USER}
     password: ${DB_PASS}
     driver-class-name: org.postgresql.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    database: postgresql
-    generate-ddl: true
-    properties:
-      hibernate:
-        format_sql: true

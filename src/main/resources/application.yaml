@@ -12,6 +12,15 @@ spring:
       name: Lucas de Oliveira Macedo
       email: lucasomac@outlook.com
       url: https://www.linkedin.com/in/lucasomac/
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    generate-ddl: true
+    properties:
+      hibernate:
+        format_sql: true
   profiles:
     active: dev
 springdoc:
